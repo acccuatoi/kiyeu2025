@@ -1,0 +1,219 @@
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiệp Mời Kỷ Yếu Cá Nhân</title>
+    <style>
+        :root {
+            --primary-color: #ff6b8b;
+            --secondary-color: #ffb3c1;
+            --text-color: #333;
+            --light-text: #666;
+            --card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--text-color);
+            line-height: 1.4;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: url('MQ.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .card-container {
+            max-height: 90vh;
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            text-align: center;
+            position: relative;
+            overflow: auto;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-height: 90vh;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        }
+
+        h1 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 10px 0 8px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: var(--light-text);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: rgba(255, 214, 107, 0.3);
+            padding: 0.1em 0.4em;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .info-box {
+            background: rgba(248, 249, 250, 0.7);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 15px 0;
+            text-align: left;
+            border-radius: 0 8px 8px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .info-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-item i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            width: 20px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .signature {
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+            margin: 0 auto 15px;
+            display: block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .closing-message {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        p {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .avatar {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 20px;
+                max-height: 85vh;
+            }
+            
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            .avatar {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="phuc.jpg" alt="Ảnh đại diện" class="avatar">
+            <h1>THIỆP MỜI CHỤP ẢNH KỶ YẾU</h1>
+            <div class="subtitle">Cùng lưu giữ khoảnh khắc tuổi thanh xuân</div>
+            
+            <p>Xin chào <span class="highlight" id="guestName"></span>,</p>
+            <p>Rất mong được chụp cùng bạn những bức ảnh kỷ yếu đáng nhớ!</p>
+            
+            <div class="info-box">
+                <div class="info-item">
+                    <i class="far fa-calendar-alt"></i>
+                    <span><strong>Thời gian:</strong> 10:00, 20/04/2025</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><strong>Địa điểm:</strong> Trường THPT chuyên Phan Bội Châu.</span>
+                </div>
+            </div>
+            
+            <div class="closing-message">
+                <p>Hãy cùng tôi tạo nên những bức ảnh thật đẹp và ý nghĩa!</p>
+                <p>Mong sớm được gặp bạn trong ngày trọng đại này.</p>
+            </div>
+            
+            <div class="signature">
+                <p>Trân trọng,</p>
+                <p>[Trần Đức Phúc]</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getGuestName() {
+          const params = new URLSearchParams(window.location.search);
+          const name = params.get("to");
+          if (name) {
+            document.getElementById("guestName").textContent = decodeURIComponent(name);
+          }
+        }
+      
+        window.onload = getGuestName;
+    </script>      
+</body>
+</html>
